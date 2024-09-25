@@ -67,6 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="homepage\dir-6\index-f.html" />
+    <Content Include="homepage\dir-5\index-e.html" />
+    <Content Include="homepage\dir-4\index-d.html" />
+    <Content Include="homepage\dir-3\index-c.html" />
+    <Content Include="homepage\dir-2\index-b.html" />
+    <Content Include="homepage\dir-1\index-a.html" />
     <Content Include="htmlch01\1-1.html" />
     <Content Include="htmlch01\1-2.html" />
     <Content Include="htmlch01\1-3.html" />
