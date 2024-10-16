@@ -5,6 +5,8 @@
 
 # example files and notes
 [0-9]*-[0-9]*.html
+[0-9]*-[0-9]*.css
+[0-9]*-[0-9]*.xml
 note/
 
 # User-specific files

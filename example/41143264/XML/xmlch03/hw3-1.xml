@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="Big5"?>
+<TDataBase>
+	<TravelData id="N20241016">
+		<Date>2</Date>
+		<Time format="yyyy.mm.dd">2024.10.16</Time>
+		<Name sex="male">王曉明</Name>
+		<Persons>1</Persons>
+		<Age>27</Age>
+		<Where type="nation">tw</Where>
+		<Traffic>car</Traffic>
+	</TravelData>
+	<TravelData id="N20230519">
+		<Date>4</Date>
+		<Time format="yyyy.mm.dd">2023.05.19</Time>
+		<Name sex="male">林曉明</Name>
+		<Persons>6</Persons>
+		<Age>23</Age>
+		<Where type="nation">jp</Where>
+		<Traffic>airplane</Traffic>
+	</TravelData>
+	<TravelData id="N20220923">
+		<Date>7</Date>
+		<Time format="yyyy.mm.dd">2022.09.23</Time>
+		<Name sex="male">吳曉明</Name>
+		<Persons>3</Persons>
+		<Age>31</Age>
+		<Where type="nation">eu</Where>
+		<Traffic>airplane</Traffic>
+	</TravelData>
+</TDataBase>

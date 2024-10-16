@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<課程 id="39393" xmlns="http://www.aecro.com.tw/ns/op/1.0">
+	<課名 學分="3">Web技術與應用</課名>
+	<教室>綜三館501 </教室>
+	<aw:教師 id="ART-7529"  sex="男" xmlns:aw="http://www.aecro.com.tw/ns/aw/1.2">
+		<aw:姓名>許乙清</aw:姓名>
+		<aw:興趣>慢跑</aw:興趣>
+		<aw:興趣>爬山</aw:興趣>
+		<aw:興趣>Coffee</aw:興趣>
+		<aw:興趣>Tea</aw:興趣>
+	</aw:教師>
+</課程>
