@@ -115,6 +115,33 @@
     <Content Include="xmlch05\5-8.xml" />
     <Content Include="xmlch05\5-9.xml" />
     <Content Include="xmlch05\hw5-1.xml" />
+    <Content Include="xmlch06\6-1.xml" />
+    <Content Include="xmlch06\6-10.xml" />
+    <Content Include="xmlch06\6-11.xml" />
+    <Content Include="xmlch06\6-12.xml" />
+    <Content Include="xmlch06\6-13.xml" />
+    <Content Include="xmlch06\6-2.xml" />
+    <Content Include="xmlch06\6-3.xml" />
+    <Content Include="xmlch06\6-4.xml" />
+    <Content Include="xmlch06\6-4A.xml" />
+    <Content Include="xmlch06\6-4B.xml" />
+    <Content Include="xmlch06\6-4C.xml" />
+    <Content Include="xmlch06\6-6.xml" />
+    <Content Include="xmlch06\6-7.xml" />
+    <Content Include="xmlch06\6-8.xml" />
+    <Content Include="xmlch06\hw6-3.xml" />
+    <Content Include="xmlch06\hw6-2.xml" />
+    <Content Include="xmlch06\hw6-1.xml" />
+    <Content Include="xmlch08\8-1.xml" />
+    <Content Include="xmlch08\8-2.xml" />
+    <Content Include="xmlch08\8-3.xml" />
+    <Content Include="xmlch08\8-4.xml" />
+    <Content Include="xmlch08\8-5.xml" />
+    <Content Include="xmlch08\8-6.xml" />
+    <Content Include="xmlch08\8-7.xml" />
+    <Content Include="xmlch08\hw8-2.xml" />
+    <Content Include="xmlch08\hw8-1.xml" />
+    <Content Include="xmlch08\8-8.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,7 +154,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="xmlch06\6-5.dtd" />
+    <Content Include="xmlch06\6-5A.dtd" />
+    <Content Include="xmlch06\6-5B.dtd" />
+    <Content Include="xmlch06\6-5C.dtd" />
+    <Content Include="xmlch06\6-9.dtd" />
+    <Content Include="xmlch06\hw6-3.dtd" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE students SYSTEM "hw6-3.dtd">
+<students>
+	<student>
+		<name>王曉明</name>
+		<id>L123456789</id>
+		<school>NFU</school>
+		<no>41143299</no>
+		<email>41143299@nfu.edu.tw</email>
+		<hobby>coding</hobby>
+		<hobby>writing</hobby>
+		<address>632雲林縣虎尾鎮文化路64號</address>
+	</student>
+	<student>
+		<name>王大明</name>
+		<id>L987654321</id>
+		<school>NFU</school>
+		<no>41143200</no>
+		<email>41143200@nfu.edu.tw</email>
+		<hobby>writing</hobby>
+		<hobby>coding</hobby>
+		<address>632雲林縣虎尾鎮文化路64號</address>
+	</student>
+</students>
