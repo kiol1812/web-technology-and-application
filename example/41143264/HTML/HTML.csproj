@@ -203,6 +203,28 @@
     <Content Include="htmlch10\10-8.html" />
     <Content Include="htmlch10\10-9.html" />
     <Content Include="htmlch10\hw10-1.html" />
+    <Content Include="JSDOM\aqx_p_432.xml" />
+    <Content Include="JSDOM\book1.xml" />
+    <Content Include="JSDOM\book2.xml" />
+    <Content Include="JSDOM\book3.xml" />
+    <Content Include="JSDOM\book4.xml" />
+    <Content Include="JSDOM\book5.xml" />
+    <Content Include="JSDOM\dom-1.html" />
+    <Content Include="JSDOM\dom-2.html" />
+    <Content Include="JSDOM\dom-3.html" />
+    <Content Include="JSDOM\domhw-5.html" />
+    <Content Include="JSDOM\domhw-4.html" />
+    <Content Include="JSDOM\domhw-3.html" />
+    <Content Include="JSDOM\domhw-2.html" />
+    <Content Include="JSDOM\domhw-1.html" />
+    <Content Include="JSDOM\dom-4.html" />
+    <Content Include="JSDOM\dom-5.html" />
+    <Content Include="JSDOM\dom-6.html" />
+    <Content Include="JSDOM\dom-7.html" />
+    <Content Include="JSDOM\dom-8.html" />
+    <Content Include="JSRSS\freewayrss1.xml" />
+    <Content Include="JSRSS\rsshw-2.html" />
+    <Content Include="JSRSS\rsshw-1.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

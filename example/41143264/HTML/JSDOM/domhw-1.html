@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>dom-4.html</title>
+</head>
+<body>
+    <script type="text/javascript">
+        fetch('book2.xml')
+            .then(response => response.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(xmlDom => {
+                let books = xmlDom.documentElement.childNodes;
+                for (let i = 0; i < books.length; i++) {
+                    if (books[i].nodeType == 1) {//Process only element nodes (type 1)
+                        // console.log(books[i])
+                        document.write("book <br/>")
+                        document.write("title : " + books[i].getElementsByTagName('title')[0].textContent + "<br />");
+                        let authors = books[i].getElementsByTagName('author');
+                        for (let i = 0; i < authors.length; ++i) document.write("author : " + authors[i].textContent + " <br/>")
+                        document.write("year : " + books[i].getElementsByTagName('year')[0].textContent + "<br />");
+                        document.write("price : " + books[i].getElementsByTagName('price')[0].textContent + "<br />");
+                    }
+                }
+            })
+            .catch(error => console.error('Error loading XML:', error));
+    </script>
+</body>
+</html>

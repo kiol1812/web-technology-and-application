@@ -8,6 +8,8 @@
 [0-9]*-[0-9]*.css
 [0-9]*-[0-9]*.xml
 [0-9]*-[0-9]*.dtd
+book*.xml
+dom-*.html
 note/
 
 # User-specific files

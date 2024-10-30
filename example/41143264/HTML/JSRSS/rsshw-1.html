@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>dom-7.html</title>
+</head>
+<body>
+    <script type="text/javascript">
+        fetch('freewayrss1.xml')
+            .then(response => response.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(xmlDom => {
+                let rootNode = xmlDom.getElementsByTagName("rss")[0];
+                let channelNode = rootNode.getElementsByTagName("channel")[0];
+                document.write("標題: " + channelNode.getElementsByTagName("title")[0].textContent + "<br />");
+                document.write("發行日期: " + channelNode.getElementsByTagName("pubDate")[0].textContent + "<br />");
+                document.write("語言: " + channelNode.getElementsByTagName("language")[0].textContent + "<br />");
+                document.write("<hr/><br/>");
+                let items = channelNode.getElementsByTagName('item');
+                console.log(items[0]);
+                for (let i = 1; i <= items.length; ++i) {
+                    // console.log(items[i])
+                    document.write(`第${i}筆資訊<hr/>`)
+                    // console.log(items[i].getElementsByTagName('title')[0].textContent);
+                    document.write(`標題: ${items[i].getElementsByTagName('title')[0].textContent}<br/>`);
+                    document.write(`聯結網址: ${items[i].getElementsByTagName('link')[0].textContent}<br/>`);
+                    document.write(`發布日期時間: ${items[i].getElementsByTagName('pubDate')[0].textContent}<br/><br/>`);
+                    // document.write(`title: ${items[i].getElementsByClassName('title')}`)
+                }
+            })
+            .catch(error => console.error('Error loading XML:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>dom-7.html</title>
+</head>
+<body>
+    <script type="text/javascript">
+        fetch('aqx_p_432.xml')
+            .then(response => response.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(xmlDom => {
+                document.write("<h1>台灣各區域PM2.5值</h1><hr/>")
+                document.write("<table border=1><tr><th>區域</th><th>縣市</th><th>PM2.5</th><th>發布時間</th></tr >");
+                let xnodeList = xmlDom.getElementsByTagName("aqx_p_432")[0].childNodes;
+                // console.log(xnodeList);
+                let xnode = xmlDom.getElementsByTagName("aqx_p_432")[0].firstChild;
+                // console.log(xnode);
+                for (let i = 0; i < xnodeList.length; i++) {
+                    if (xnode.nodeType == 1) {//Process only element nodes (type 1)
+                        document.write("<tr>");
+                        let info = xnode.childNodes;
+                        console.log(info);
+                        info.forEach(item => {
+                            if (item.tagName == "sitename") document.write("<td>" + item.textContent + "</td>")
+                            if (item.tagName == "county") document.write("<td>" + item.textContent + "</td>")
+                            if (item.tagName == "pm2.5") {
+                                let color = "green";
+                                let pm25 = parseInt(item.textContent);
+                                if (pm25 >= 15) color = "yellow";
+                                if (pm25 > 35) color = "orange";
+                                if (pm25 > 65) color = "red";
+                                if (pm25 > 150) color = "purple";
+                                if (pm25 > 250) color = "moroon";
+                                document.write("<td>" + `<font color=\"${color}\">` + item.textContent + "</font>" + "</td>")
+                            }
+                            if (item.tagName == "publishtime") document.write("<td>" + item.textContent + "</td>")
+                        });
+                        document.write("</tr>");
+                    }
+                    xnode = xnode.nextSibling;
+                }
+                document.write("</table><hr/>")
+            })
+            .catch(error => console.error('Error loading XML:', error));
+    </script>
+</body>
+</html>

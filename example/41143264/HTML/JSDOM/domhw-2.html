@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>dom-7.html</title>
+</head>
+<body>
+    <script type="text/javascript">
+        fetch('book4.xml')
+            .then(response => response.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(xmlDom => {
+                document.write("<h1>書名表格表示</h1><hr/>")
+                document.write("<table border=1><tr><th>書號</th><th>書名</th><th>作者</th><th>價錢</th></tr>");
+                let xnodeList = xmlDom.getElementsByTagName("booklist")[0].childNodes;
+                let xnode = xmlDom.getElementsByTagName("booklist")[0].firstChild;
+                for (let i = 0; i < xnodeList.length; i++) {
+                    if (xnode.nodeType == 1) {//Process only element nodes (type 1)
+                        document.write("<tr>");
+                        let info = xnode.childNodes;
+                        info.forEach(item => {
+                            if (item.nodeType == 1) document.write("<td>" + item.textContent + "</td>")
+                        });
+                        document.write("</tr>");
+                    }
+                    xnode = xnode.nextSibling;
+                }
+                document.write("</table><hr/>")
+            })
+            .catch(error => console.error('Error loading XML:', error));
+        fetch('book5.xml')
+            .then(response => response.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+            .then(xmlDom => {
+                document.write("<h1>書名表格表示</h1><hr/>")
+                document.write("<table border=1><tr><th>書號</th><th>書名</th><th>作者</th><th>價錢</th></tr>");
+                let xnodeList = xmlDom.getElementsByTagName("booklist")[0].childNodes;
+                let xnode = xmlDom.getElementsByTagName("booklist")[0].firstChild;
+                for (let i = 0; i < xnodeList.length; i++) {
+                    if (xnode.nodeType == 1) {//Process only element nodes (type 1)
+                        document.write("<tr>");
+                        let info = xnode.childNodes;
+                        info.forEach(item => {
+                            if (item.nodeType == 1) document.write("<td>" + item.textContent + "</td>")
+                        });
+                        document.write("</tr>");
+                    }
+                    xnode = xnode.nextSibling;
+                }
+                document.write("</table><hr/>")
+            })
+            .catch(error => console.error('Error loading XML:', error));
+    </script>
+</body>
+</html>
