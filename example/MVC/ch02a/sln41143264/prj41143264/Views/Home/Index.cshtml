@@ -1,0 +1,51 @@
+﻿@model IEnumerable<prj41143264.Models.tToDo>
+
+@{
+    ViewBag.Title = "待辦事項";
+}
+
+<h2>學號41143264:待辦事項</h2>
+
+<p>
+    @Html.ActionLink("待辦事項新增", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>編號</th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.fTitle)-->
+            標題
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.fLevel)-->
+            重要層級
+        </th>
+        <th>
+            <!--@Html.DisplayNameFor(model => model.fDate)-->
+            結案日期
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@item.fId</td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fLevel)
+        </td>
+        <td>
+            <!--@Html.DisplayFor(modelItem => item.fDate)-->
+            @DateTime.Parse(item.fDate.ToString()).ToShortDateString()
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.fId }) |
+            <!--@Html.ActionLink("Details", "Details", new { id=item.fId }) |-->
+            @Html.ActionLink("Delete", "Delete", new { id = item.fId }, new { onclick = "return confirm('確定刪除嗎?')", @class="btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

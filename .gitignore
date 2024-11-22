@@ -12,6 +12,8 @@ book*.xml
 dom-*.html
 note/
 
+AEL022900範例檔/
+
 # User-specific files
 *.rsuser
 *.suo
