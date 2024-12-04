@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>@ViewData["Company"]</h3>
+        <table border="1">
+            <tr style="background-color:#c6e8f8">
+                <td>編號</td>
+                <td>品名</td>
+                <td>單價</td>
+            </tr>
+            @foreach (var item in ViewBag.Products)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
