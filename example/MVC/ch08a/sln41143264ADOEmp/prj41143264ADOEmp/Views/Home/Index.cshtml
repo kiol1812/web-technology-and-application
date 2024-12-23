@@ -1,0 +1,63 @@
+﻿@model IEnumerable<prj41143264ADOEmp.Models.tEmployee>
+
+@{
+    ViewBag.Title = "學號:41143264***員工管理";
+}
+
+<h2>學號:41143264員工管理</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fEmpId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fMail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fSalary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEmploymentDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fMail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEmploymentDate)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit")?fEmpId=@item.fEmpId" class="btn btn-warning">編輯</a>
+                <a href="@Url.Action("Delete")?fEmpId=@item.fEmpId"
+                   class="btn btn-danger"
+                   onclick="return confirm('確定要刪除編號 @item.fEmpId 的員工記錄嗎？');">
+                    刪除
+                </a>
+            </td>
+        </tr>
+    }
+</table>
