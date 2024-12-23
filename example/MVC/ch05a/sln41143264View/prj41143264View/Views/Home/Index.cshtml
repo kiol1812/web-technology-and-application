@@ -1,0 +1,55 @@
+﻿@model IEnumerable<prj41143264View.Models.NightMarket>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DTC夜市通</title>
+</head>
+<body>
+    <h3>台中市知名夜市</h3>
+    <hr />
+    <table border="0" cellspacing="0" cellpadding="10">
+        <tr bgcolor="#a6b141" align="center">
+            <th>編號</th>
+            <th>名稱</th>
+            <th>地址</th>
+            <th></th>
+        </tr>
+        @{
+            int i = 0;
+            string imgName, colorStyle;
+        }
+        @foreach (var item in Model)
+        {
+            imgName = item.Id + ".jpg";
+            if (i % 2 == 0)
+            {
+                colorStyle = "aliceblue";
+            }
+            else
+            {
+                colorStyle = "#edf8cf";
+            }
+            i++;
+            <tr align="center" bgcolor="@colorStyle">
+                <td>@item.Id</td>
+                <td>
+                    @item.Name<br />
+                    <img src="~/Images/@imgName" width="150" />
+                </td>
+                <td>@item.Address</td>
+                <td>
+                    <a href="https://www.google.com.tw/maps/place/@item.Address"
+                       target="_blank">路線規劃</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

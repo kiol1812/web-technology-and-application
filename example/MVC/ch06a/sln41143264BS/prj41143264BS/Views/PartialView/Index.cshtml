@@ -1,0 +1,14 @@
+﻿@model IEnumerable<prj41143264BS.Models.Product>
+
+@{
+    ViewBag.Title = "學號:41143264***首頁";
+}
+
+<h2>學號:41143264-暢銷好書</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_ColPartial", item)
+    }
+</div>

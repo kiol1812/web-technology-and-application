@@ -1,0 +1,45 @@
+﻿@model IEnumerable<prj41143264LayoutPage.Models.NightMarket>
+@{
+    ViewBag.Title = "學號:41143264-夜市通";
+}
+
+<h2>學號:41143264-台中市知名夜市</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            編號
+        </th>
+        <th>
+            名稱
+        </th>
+        <th>
+            地址
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        string imgName = item.Id + ".jpg";
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)<br />
+                <img src="~/Images/@imgName" width="150"
+                     class="img-thumbnail" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                <a href="https://www.google.com.tw/maps/place/@item.Address"
+                   class="btn btn-info" target="_blank">路線規劃</a>
+            </td>
+        </tr>
+    }
+
+</table>

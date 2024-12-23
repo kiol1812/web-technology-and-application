@@ -1,0 +1,13 @@
+﻿@model prj41143264BS.Models.Product
+
+@{
+    string imgName = Model.Id + ".jpg";
+}
+<div class="col-12 col-md-4" style="margin-top:10px;">
+    <div class="img-thumbnail">
+        <img src="~/Images/@imgName" class="img-responsive" />
+        <h4>@Model.Name</h4>
+        <p>NT：@Model.Price 元</p>
+        <p><a href="http://books.gotop.com.tw/v_@Model.Id" class="btn btn-info" target="_blank">更多資訊</a></p>
+    </div>
+</div>

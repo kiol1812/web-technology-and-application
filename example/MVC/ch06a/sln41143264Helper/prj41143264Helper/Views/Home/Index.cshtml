@@ -1,0 +1,63 @@
+﻿@model IEnumerable<prj41143264Helper.Models.Employee>
+
+@{
+    ViewBag.Title = "學號:41143264***員工列表";
+}
+
+@helper PrintLevel(int salary)
+{
+    if (salary <= 22000)
+    {
+        <td style="background-color:lightpink">
+            @salary
+        </td>
+    }
+    else if (salary > 22000 && salary <= 50000)
+    {
+        <td style="background-color:lightyellow">
+            @salary
+        </td>
+    }
+    else
+    {
+        <td style="background-color:lightgreen">
+            @salary
+        </td>
+    }
+}
+
+<h2>學號:41143264-員工列表</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            員工編號
+        </th>
+        <th>
+            姓名
+        </th>
+        <th>
+            薪資
+        </th>
+        <th>
+            實領薪資
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            @PrintLevel(item.Salary)
+            <td>
+                @MyHelper.GetRealSalary(item.Salary, 0.06)
+            </td>
+        </tr>
+    }
+
+</table>
